@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+    <head>
+        <script type="text/javascript" src="tablesorter-master/jquery-latest.js"></script>
+        <script type="text/javascript" src="tablesorter-master/jquery.tablesorter.js"></script>
+        
+        <title>MIT Saliency Benchmark</title>
+        <link rel="stylesheet" type="text/css" media="screen" 
+              href="styles.css" />
+        <style type="text/css">
+        
+<!--
+.style2 {font-size: 12px}
+-->
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                
+
+                <h1 id="title">MIT Saliency Benchmark</h1><br>
+                
+                <div>
+                    <img class="banner2" src="exampleImgs/banner.001.png">
+                </div>
+                
+                <nav>
+                    <ul id="navlist">
+                        <li><a href="home.html">About</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li id="active"><a href="datasets.html">Datasets</a></li>
+                        <li><a href="submission.html">Submission</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </nav>
+                
+<div id="files">
+<h2>MIT Saliency Benchmark datasets</h2>
+<table border="1">
+    <tr>
+        <td idth="100">Dataset</td>
+        <td idth="400">Citation</td>
+        <td idth="100">Images</td>
+        <td width="70">Observers</td>
+        <td width="70">Tasks</td>
+        <td width="70">Durations</td>
+        <td width="300">Extra Notes</td>
+    </tr>
+    
+    <tr bgcolor=#DDDDDD>
+        <td><a href="results_mit300.html">MIT300</a></td>
+        <td>Tilke Judd, Fredo Durand, Antonio Torralba. <a href="http://hdl.handle.net/1721.1/68590">A Benchmark of Computational Models of Saliency to Predict Human Fixations [MIT tech report 2012]</a></td>
+        <td><strong>300</strong> natural indoor and outdoor scenes <br><em>size:</em> max dim: 1024px, other dim: 457-1024px<br>
+            1 dva* ~ 35px
+        </td>
+        <td><strong>39</strong> <br><em>ages:</em> 18-50</td>
+        <td>free viewing</td>
+        <td>3 sec</td>
+        <td>This was the first data set with held-out human eye movements, and is used as a benchmark test set. <br>
+            <em> eyetracker: </em> ETL 400 ISCAN (240Hz) <br>
+            <a href="http://saliency.mit.edu/BenchmarkIMAGES.zip">Download 300 test images.</a>
+        </td>
+    </tr>
+    <tr bgcolor=#DDDDDD>
+        <td><a href="results_cat2000.html">CAT2000</a></td>
+        <td>Ali Borji, Laurent Itti. <a href="http://arxiv.org/abs/1505.03581">CAT2000: A Large Scale Fixation Dataset for Boosting Saliency Research
+            [CVPR 2015 workshop on "Future of Datasets"]</a></td>
+        <td><strong>4000</strong> images from <a href="javascript:void(0);" onclick="return popitup('categories.html')">20 different categories</a> <br><em>size:</em> 1920x1080px<br>
+            1 dva* ~ 38px
+        </td>
+        <td><strong>24</strong> per image (120 in total) <br><em>ages:</em> 18-27</td>
+        <td>free viewing</td>
+        <td>5 sec</td>
+        <td>This dataset contains two sets of images: train and test. Train images (100 from each category) and fixations of 18 observers are shared but 6 observers are held-out. Test images are available but fixations of all 24 observers are held out.<br>
+            <em> eyetracker: </em> EyeLink1000 (1000Hz)<br>
+            <a href="http://saliency.mit.edu/testSet.zip">Download 2000 test images.</a><br>
+            <a href="http://saliency.mit.edu/trainSet.zip">Download 2000 train images (with fixations of 18 observers).</a>
+        </td>
+    </tr>
+</table>
+
+
+<h2>Other saliency datasets</h2>
+[If you have another fixation data set that you would like to list here, email <a href="mailto:saliency@mit.edu">saliency@mit.edu</a>]<br><br>
+
+<!--h4>Other fixation data sets</h4-->
+	<table border="1">
+        
+        <tr>
+            <td idth="100">Dataset</td>
+            <td idth="400">Citation</td>
+            <td idth="100">Images</td>
+            <td width="70">Observers</td>
+            <td width="70">Tasks</td>
+            <td width="70">Durations</td>
+            <td width="300">Extra Notes</td>
+        </tr>
+
+        <tr>
+            <td><a href="http://people.csail.mit.edu/tjudd/WherePeopleLook/index.html">MIT data set</a></td>
+            <td>Tilke Judd, Krista Ehinger, Fredo Durand, Antonio Torralba. <a href="http://people.csail.mit.edu/tjudd/WherePeopleLook/Docs/wherepeoplelook.pdf">Learning to Predict where Humans Look [ICCV 2009]</a></td>
+            <td><strong>1003</strong> natural indoor and outdoor scenes <br><em>size:</em> max dim: 1024px, other dim: 405-1024px <br>
+                1 dva ~ 35px
+            </td>
+            <td><strong>15</strong> <br><em>ages:</em> 18-35</td>
+            <td>free viewing</td>
+            <td>3 sec</td>
+            <td>Includes: 779 landscape images and 228 portrait images. Can be used as training data for MIT benchmark.<br>
+                <em> eyetracker: </em> ETL 400 ISCAN (240Hz)
+            </td> 
+        </tr>
+        
+        <tr>
+            <td><a href="http://figrim.mit.edu/index_eyetracking.html">FIGRIM Fixation Dataset</a></td>
+            <td>Zoya Bylinskii, Phillip Isola, Constance Bainbridge, Antonio Torralba, Aude Oliva. <a href="http://web.mit.edu/zoya/www/docs/figrimProof.pdf">Intrinsic and Extrinsic Effects on Image Memorability [Vision Research 2015]</a></td>
+            <td><strong>2787</strong> natural scenes from 21 different indoor and outdoor scene categories
+                <br><em>size:</em> 1000x1000px <br>
+                1 dva ~ 33px
+            </td>
+            <td><strong>15</strong> average per image (42 in total) <br><em>ages:</em> 17-33</td>
+            <td>memory task</td>
+            <td>2 sec</td>
+            <td>Includes: annotated (LabelMe) objects and memory scores for 630 of the images<br>
+                <em> eyetracker: </em> EyeLink 1000 (500 Hz)
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="http://antoinecoutrot.magix.net/public/databases.html">Coutrot Database 1</a></td>
+            <td>Antoine Coutrot, Nathalie Guyader. <a href="http://antoinecoutrot.magix.net/public/assets/coutrot_jov2014.pdf"> How saliency, faces, and sound influence gaze in dynamic
+                social scenes [JoV 2014]</a><br> Antoine Coutrol, Nathalie Guyader. <a href="http://antoinecoutrot.magix.net/public/assets/coutrot_et_al_wiamis2013.pdf">Toward the introduction of auditory information in dynamic visual attention models [WIAMIS 2013]</a></td>
+            <td><strong>60</strong> videos <br><em>size:</em> 720x576px <br>
+            </td>
+            <td><strong>72</strong> <br><em>ages:</em> 20-35</td>
+            <td>free viewing</td>
+            <td>average: 17 sec</td>
+            <td>4 categories: one moving object, several moving objects, landscapes, people having a conversation. Each video has been seen in 4 auditory conditions. <br>
+                <em> eyetracker: </em> EyeLink 1000 (1000 Hz)
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="http://antoinecoutrot.magix.net/public/databases.html">Coutrot Database 2</a></td>
+            <td>Antoine Coutrot, Nathalie Guyader. <a href="http://antoinecoutrot.magix.net/public/assets/coutrot_eusipco2015.pdf">An efficient audiovisual saliency model to predict eye positions when looking at conversations [EUSIPCO 2015]</a></td>
+            <td><strong>15</strong> videos <br><em>size:</em> 1232x504px <br>
+            </td>
+            <td><strong>40</strong> <br><em>ages:</em> 22-36</td>
+            <td>free viewing</td>
+            <td>average: 44 sec</td>
+            <td>Videos of 4 people having a meeting. Each video has been seen in 2 auditory conditions (with and without the original soundtrack). <br>
+                <em> eyetracker: </em> EyeLink 1000 (1000 Hz)
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td><a href="http://compression.ru/video/savam/">SAVAM</a></td>
+            <td>Yury Gitman, Mikhail Erofeev, Dmitriy Vatolin, Andrey Bolshakov, Alexey Fedorov. <a href="http://www.compression.ru/video/savam/pdf/Semiautomatic_visual_attention_modeling_and_its_application_to_video_compression.pdf">Semiautomatic Visual-Attention Modeling and Its Application to Video Compression [ICIP 2014]</a></td>
+            <td><strong>41</strong> videos <br><em>size:</em> max dim: 1920px, other dim: 1080px <br>
+            </td>
+            <td><strong>50</strong> <br><em>ages:</em> 18-56</td>
+            <td>free viewing</td>
+            <td>average: 20 sec</td>
+            <td>Left and right stereoscopic views available for all sequences.
+                Nevertheless, only the left view was demonstrated to observers.<br>
+                <em> eyetracker: </em> SMI iViewXTM Hi-Speed 1250 (500Hz)
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="http://www.ece.nus.edu.sg/stfpage/eleqiz/crowd.html">Eye Fixations in Crowd (EyeCrowd) data set</a></td>
+            <td>Ming Jiang, Juan Xu, Qi Zhao. <a href="http://www.ece.nus.edu.sg/stfpage/eleqiz/publications/pdf/crowd_eccv14.pdf">Saliency in Crowd [ECCV 2014]</a></td>
+            <td><strong>500</strong> natural indoor and outdoor images with varying crowd densities <br><em>size:</em> 1024x768px <br>
+                1 dva ~ 26px
+            </td>
+            <td><strong>16</strong> <br><em>ages:</em> 20-30</td>
+            <td>free viewing</td>
+            <td>5 sec</td>
+            <td>The images have a diverse range of crowd densities (up to 268 faces per image).  Annotations available: faces labelled with rectangles; two annotations of pose and partial occlusion on each face. <br>
+                <em> eyetracker: </em> Eyelink 1000 (1000Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.ece.nus.edu.sg/stfpage/eleqiz/webpage_saliency.html">Fixations in Webpage Images (FiWI) data set</a></td>
+            <td>Chengyao Shen, Qi Zhao. <a href="http://www.ece.nus.edu.sg/stfpage/eleqiz/publications/pdf/webpage_eccv14.pdf">Webpage Saliency [ECCV 2014]</a></td>
+            <td><strong>149</strong> webpage screenshots from in 3 categories. <br><em>size:</em> 1360x768px<br>
+                1 dva ~ 26px
+            </td>
+            <td><strong>11</strong> <br><em>ages:</em> 21-25</td>
+            <td>free viewing</td>
+            <td>5 sec</td>
+            <td>Text: 50, Pictorial: 50, Mixed:49 <br>
+                <em> eyetracker: </em> Eyelink 1000 (1000Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html">VIU data set</a></td>
+            <td>Kathryn Koehler, Fei Guo, Sheng Zhang, Miguel P. Eckstein. <a href="http://www.journalofvision.org/content/14/3/14.full">What Do Saliency Models Predict? [JoV 2014]</a></td>
+            <td><strong>800</strong> natural indoor and outdoor scenes <br><em>size:</em> max dim: 405px <br>
+                1 dva ~ 27px
+            </td>
+            <td><strong>100,22,20,38</strong>  <br><em>ages:</em> 18-23</td>
+            <td>explicit saliency judgement, free viewing, saliency search, cued object search</td>
+            <td>until response, 2 sec, 2 sec, 2 sec</td>
+            <td><em> eyetracker: </em> Eyelink 1000 (250Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.ece.nus.edu.sg/stfpage/eleqiz/predicting.html">Object and Semantic Images and Eye-tracking (OSIE) data set</a></td>
+            <td>Juan Xu, Ming Jiang, Shuo Wang, Mohan Kankanhalli, Qi Zhao. <a href="http://www.ece.nus.edu.sg/stfpage/eleqiz/publications/pdf/saliency_jov14.pdf">Predicting Human Gaze Beyond Pixels [JoV 2014]</a></td>
+            <td><strong>700</strong> natural indoor and outdoor scenes, aesthetic photographs from Flickr and Google <br><em>size:</em> 800x600px <br>
+                1 dva ~ 24px
+            </td>
+            <td><strong>15</strong> <br><em>ages:</em> 18-30</td>
+            <td>free viewing</td>
+            <td>3 sec</td>
+            <td>A large portion of images have multiple dominant objects in the same image. Annotations available: 5,551 segmented objects with fine contours; annotations of 12 semantic attributes on each of the 5,551 objects <br>
+                <em> eyetracker: </em> Eyelink 1000 (2000Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://mmas.comp.nus.edu.sg/VIP.html">VIP data set</a></td>
+            <td>Keng-Teck Ma, Terence Sim, Mohan Kankanhalli. <a href="http://mmas.comp.nus.edu.sg/VIP_files/hbu13_VIP.pdf">A Unifying Framework for Computational Eye-Gaze Research [Workshop on Human Behavior Understanding 2013]</a></td>
+            <td><strong>150</strong> neutral and affective images, randomly chosen from <a href="http://mmas.comp.nus.edu.sg/NUSEF.html">NUSEF dataset</a><br>
+                <!-- The subjects were seated at 50 centimeters distance from a 22 inch LCD monitor with 1680x1050 resolution -->
+            </td>
+            <td><strong>75</strong> <br><em>ages:</em> undergrads, postgrads, working adults</td>
+            <td>free viewing, anomaly detection</td>
+            <td>5 sec</td>
+            <td>Annotations available: demographic and personality traits of the viewers (can be used for training trait-specific saliency models)<br>
+                <em> eyetracker: </em> SMI RED 250 (120Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://people.csail.mit.edu/tjudd/LowRes/">MIT Low-resolution data set</a></td>
+            <td>Tilke Judd, Fredo Durand, Antonio Torralba. <a href="http://www.journalofvision.org/content/11/4/14.full.pdf+html">Fixations on Low-Resolution Images [JoV 2011]</a></td>
+            <td><strong>168</strong> natural and <strong>25</strong> pink noise images at 8 different resolutions <br><em>size:</em> 860x1024px <br>
+                1 dva ~ 35px
+            </td>
+            <td><strong>8</strong> viewers per image, 64 in total <br><em>ages:</em> 18-55</td>
+            <td>free viewing</td>
+            <td>3 sec</td>
+            <td><em> eyetracker: </em> ETL 400 ISCAN (240Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.csc.kth.se/~kootstra/index.php?item=215&menu=200">KTH Koostra data set</a></td>
+            <td>Gert Kootstra, Bart de Boer, Lambert R. B. Schomaker. <a href="http://www.csc.kth.se/~kootstra/index.php?item=602&menu=&file=http://dx.doi.org/10.1007/s12559-010-9089-5">Predicting Eye Fixations on Complex Visual Stimuli using Local Symmetry [Cognitive Computation 2011]</a></td>
+            <td><strong>99</strong> photographs from 5 categories. <br><em>size:</em> 1024x768px</td>
+            <!-- The images were displayed full-screen with a resolution of 1,024 × 768 pixels on an 18″ CRT monitor of 36 by 27 cm at a distance of 70 cm from the participants. The visual angle was approximately 29° horizontally by 22° vertically. -->
+            <td><strong>31</strong> <br><em>ages:</em> 17-32</td>
+            <td>free viewing</td>
+            <td>5 sec</td>
+            <td>Images by category: 19 images with symmetrical natural objects, 12 images of animals in a natural setting, 12 images of street scenes, 16 images of buildings, 40 images of natural environments. <br>
+                <em> eyetracker: </em> Eyelink I 
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://mmas.comp.nus.edu.sg/NUSEF.html">NUSEF data set</a></td>
+            <td>Subramanian Ramanathan, Harish Katti, Nicu Sebe, Mohan Kankanhalli, Tat-Seng Chua. <a href="http://mmas.comp.nus.edu.sg/63140030.pdf">An eye fixation database for saliency detection in images [ECCV 2010]</a></td>
+            <td><strong>758</strong> everyday scenes from Flickr, aesthetic content from Photo.net, Google images, emotion-evoking <a href="http://csea.phhp.ufl.edu/media.html">IAPS pictures</a> <br><em>size:</em> 1024x728px</td>
+            <td><strong>25</strong> on average <br><em>ages:</em> 18-35</td>
+            <td>free viewing</td>
+            <td>5 sec</td>
+            <td><em> eyetracker: </em> ASL </td>
+        </tr>
+        <tr>
+            <td><a href="http://ii.tudelft.nl/iqlab/eye_tracking_2.html">TUD Image Quality Database 2</a></td>
+            <td>H. Alers, H. Liu, J. Redi and I. Heynderickx. <a href="http://mmi.tudelft.nl/pub/hantao/SPIE10ALERS.pdf">Studying the risks of optimizing the image quality in saliency regions at the expense of background content [SPIE 2010]</a></td>
+            <td><strong>160</strong> images (40 at 4 different levels of compression) <br><em>size:</em> 600x600px</a></td>
+            <td><strong>40, 20</strong> <br><em>ages:</em> students</td>
+            <td>free viewing, quality assessment</td>
+            <td>8 sec</td>
+            <td><em> eyetracker: </em>iView X RED (50Hz)</td>
+        </tr>
+        <tr>
+            <td><a href="http://cvcl.mit.edu/searchmodels/">Ehinger data set</a></td>
+            <td>Krista Ehinger, Barbara Hidalgo-Sotelo, Antonio Torralba, Aude Oliva. <a href="http://cvcl.mit.edu/Papers/EhingerHidalgoTorralbaOliva_VisCog2009.pdf">Modeling search for people in 900 scenes [Visual Cognition 2009]</a></td>
+            <td><strong>912</strong> outdoor scenes <br><em>size:</em> 800x600px <br>
+                1 dva ~ 34px
+            </td>
+            <td><strong>14</strong> <br><em>ages:</em> 18-40</td>
+            <td>search (person detection)</td>
+            <td>until response</td>
+            <td><em> eyetracker: </em> ISCAN RK-464 (240Hz) </td>
+        </tr>
+        <tr>
+            <td><a href="http://live.ece.utexas.edu/research/doves/">A Database of Visual Eye Movements (DOVES)</a></td>
+            <td>Ian van der Linde, Umesh Rajashekar, Alan C. Bovik, Lawrence K. Cormack. <a href="http://live.ece.utexas.edu/research/doves/">DOVES: A database of visual eye movements [Spatial Vision 2009]</a></td>
+            <td><strong>101</strong> natural calibrated images <br><em>size:</em> 1024x768px</td>
+            <td><strong>29</strong> <br><em>ages:</em> mean=27</td>
+            <td>free viewing</td>
+            <td>5 sec</td>
+            <td><em> eyetracker: </em>Fourward Tech. Gen. V (200Hz)</td>
+        </tr>
+        <tr>
+            <td><a href="http://ii.tudelft.nl/iqlab/eye_tracking_1.html">TUD Image Quality Database 1</a></td>
+            <td>H. Liu and I. Heynderickx. <a href="http://mmi.tudelft.nl/pub/hantao/ICIP2009.pdf">Studying the Added Value of Visual Attention in Objective Image Quality Metrics Based on Eye Movement Data [ICIP 2009]</a></td>
+            <td><strong>29</strong> images from the <a href="http://live.ece.utexas.edu/research/quality/">LIVE</a> image quality database (varying dimensions)</td>
+            <td><strong>20</strong> <br><em>ages:</em> students</td>
+            <td>free viewing</td>
+            <td>10 sec</td>
+            <td><em> eyetracker: </em>iView X RED (50Hz)</td>
+        </tr>
+        <tr>
+            <td><a href="http://www.sea-mist.se/tek/rcg.nsf/pages/vaiq-db">Visual Attention for Image Quality (VAIQ) Database</a></td>
+            <td>Ulrich Engelke, Anthony Maeder, Hans-Jurgen Zepernick. <a href="">Visual Attention Modeling for Subjective Image Quality Databases [MMSP 2009]</a></td>
+            <td><strong>42</strong> images from 3 image quality databases: <a href="http://www.irccyn.ec-nantes.fr/ivcdb/">IRCCyN/IVC</a>, <a href="http://mict.eng.u-toyama.ac.jp/mictdb.html">MICT</a>, and <a href="http://live.ece.utexas.edu/research/quality/">LIVE</a> (varying dimensions)</td>
+            <td><strong>15</strong> <br><em>ages:</em> 20-60 (mean=42)</td>
+            <td>free viewing</td>
+            <td>12 sec</td> 
+            <td><em> eyetracker: </em>EyeTech TM3 </td>
+        </tr>
+        <tr>
+            <td><a href="http://www-sop.inria.fr/members/Neil.Bruce/#SOURCECODE">Toronto data set</a></td>
+            <td>Neil Bruce, John K. Tsotsos. <a href="http://journalofvision.org/7/9/950/">Attention based on information maximization [JoV 2007]</a></td>
+            <td><strong>120</strong> color images of outdoor and indoor scenes <br><em>size:</em> 681x511px</td>
+            <td><strong>20</strong><br><em>ages:</em> undergrads, grads </td>
+            <td>free viewing</td>
+            <td>4 sec</td>
+            <td>A large portion of images here do not contain particular regions of interest.<br> 
+            <em> eyetracker: </em> ERICA workstation including a Hitachi CCD camera with an IR emitting LED </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.fifadb.com/">Fixations in Faces (FiFA) data base</a></td>
+            <td>Moran Cerf, Jonathan Harel, Wolfgang Einhauser, Christof Koch. <a href="http://media.wix.com/ugd/c15c1f_a077a36c8d62a92e89b88e9a872a564a.pdf">Predicting human gaze using low-level saliency combined with face detection [NIPS 2007]</a></td>
+            <td><strong>200</strong> color outdoor and indoor scenes <br><em>size:</em> 1024x768px <br>
+                1 dva ~ 34px
+            </td>
+            <td><strong>8</strong> </td>
+            <td>free viewing</td>
+            <td>2 sec</td>
+            <td>Images include salient objects and many different types of faces. This data set was originally used to establish that human faces are very attractive to observers and to test models of saliency that included face detectors. Object annotations are available. <br>
+                <em> eyetracker: </em> Eyelink 1000 (1000Hz)
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.irisa.fr/temics/staff/lemeur/visualAttention/">Le Meur data set</a></td>
+            <td>Olivier Le Meur, Patrick Le Callet, Dominique Barba, Dominique Thoreau. <a href="http://people.irisa.fr/Olivier.Le_Meur/publi/LeMeur_IEEEPAMI.pdf">A coherent computational approach to model the bottom-up visual attention [PAMI 2006]</a></td>
+            <td><strong>27</strong> color images</td>
+            <td><strong>40</strong> </td>
+            <td>free viewing</td>
+            <td>15 sec</td>
+            <td><em> eyetracker: </em> Cambridge Research </td>
+        </tr>
+   </table>
+    <div><br>(*) dva = <strong>degree of visual angle</strong></div>
+    <div><a href="https://github.com/cvzoya/saliency/tree/master/computeVisualAngle">Matlab code</a> for computing visual angle. This code has been written to help standardize and make this computation easier.<br>
+        Why is this relevant to saliency modeling? A continuous fixation map is calculated by convolving locations of fixation with a Gaussian of a particular sigma. This sigma is most commonly set to be approximately 1 degree of visual angle, which is an estimate of the size of the fovea (<a href="http://link.springer.com/article/10.3758%2Fs13428-012-0226-9">Le Meur and Baccino, 2013</a>). This gives us an upper bound of how well we can predict where humans look on the images in a particular dataset, and thus this should inform how we evaluate saliency models.
+        <br></div>
+    
+				
+ <br>
+<!--Itti and Baldi -->
+<br>
+
+<h4>Other saliency-related data sets</h4>
+    <a href="http://www.irccyn.ec-nantes.fr/spip.php?article494&lang=en">IVC Data sets</a> The Images and Video Communications team (IVC) of IRCCyN lab provides several image and video databases including eye movement recordings. Some of the databases are based on a free viewing task, other on a quality evaluation task.
+    <br><br>
+<a href="http://www.jdl.ac.cn/user/jiali/RSD_Dataset.htm">Regional Saliency Dataset (RSD)</a> [Li, Tian, Huang, Gao 2009] <a href="http://dl.acm.org/citation.cfm?id=1699033">(paper)</a>
+A dataset for evaluating visual saliency in video.<br>
+<br>
+<a href="http://research.microsoft.com/en-us/um/people/jiansun/SalientObject/salient_object.htm">MSRA Salient Object Database</a> [Liu et al. 2007] database of 20,000 images with hand labeled rectangles of principle salient object by 3 users.
+<br><br>
+ 
+</div>
+
+</body>
+                
+</html>
+
+<script>
+
+
+    function popitup(url) {
+        newwindow=window.open(url,'name','height=300,width=400');
+    }
+
+
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-52543678-1', 'auto');
+    ga('send', 'pageview');
+    
+</script>
